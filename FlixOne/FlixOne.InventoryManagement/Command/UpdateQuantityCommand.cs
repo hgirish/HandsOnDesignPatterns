@@ -7,7 +7,7 @@ internal class UpdateQuantityCommand : NonTerminatingCommand, IParameterisedComm
 {
     private readonly IInventoryContext _context;
 
-    public UpdateQuantityCommand(IUserInterface userInterface,
+    internal UpdateQuantityCommand(IUserInterface userInterface,
         IInventoryContext context) : base(userInterface)
     {
         _context = context;

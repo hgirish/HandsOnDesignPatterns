@@ -1,5 +1,6 @@
 ﻿using FlixOne.InventoryManagement.Command;
 using FlixOne.InventoryManagementTests.Helpers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace FlixOne.InventoryManagementTests;
 [TestClass]
