@@ -27,7 +27,7 @@ internal class AddInventoryCommand : NonTerminatingCommand, IParameterisedComman
         return !string.IsNullOrWhiteSpace(InventoryName);
     }
 
-    internal override bool InternalCommand()
+    protected override bool InternalCommand()
     {
         return _context.AddBook(InventoryName!);
     }

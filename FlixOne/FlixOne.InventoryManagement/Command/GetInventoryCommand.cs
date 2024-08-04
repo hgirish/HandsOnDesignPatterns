@@ -13,7 +13,7 @@ internal class GetInventoryCommand: NonTerminatingCommand
         _context = context;
     }
 
-    internal override bool InternalCommand()
+    protected override bool InternalCommand()
     {
         foreach (var book in _context.GetBooks())
         {

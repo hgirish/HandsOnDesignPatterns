@@ -1,36 +1,27 @@
 ﻿
 
+using FlixOne.InventoryManagement.Command;
+using FlixOne.InventoryManagement.UserInterface;
+using FlixOne.InventoryManagementClient;
+using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-Greeting();
+IServiceCollection services = new ServiceCollection();
 
+ConfigureServices(services);
 
+IServiceProvider serviceProvider = services.BuildServiceProvider();
+var service = serviceProvider.GetService<ICatalogService>();
+service.Run();
 
-// note: inline out variable introduced as part of C# 7.0
-//GetCommand("?").RunCommand(out bool shouldQuit);
-
-
-
-//while (!shouldQuit)
-//{
-//    // handle the commands
-//}
 
 Console.WriteLine("CatalogService  has completed.");
 
-void Greeting()
-{
-    var version = Assembly.GetExecutingAssembly().GetName().Version;
-    Console.WriteLine("***********************************");
-    Console.WriteLine("*                                  *");
-    Console.WriteLine("*     Welcome to FlixOne Inventory Management System");
-    Console.WriteLine($"*                           v{version}       *");
-    Console.WriteLine("***********************************");
-    Console.WriteLine("");
 
-}
 
-object GetCommand(string v)
+static void ConfigureServices(IServiceCollection services)
 {
-    throw new NotImplementedException();
+    services.AddTransient<IUserInterface, ConsoleUserInterface>();
+    services.AddTransient<ICatalogService, CatalogService>();
+    services.AddTransient<IInventoryCommandFactory, InventoryCommandFactory>();
 }

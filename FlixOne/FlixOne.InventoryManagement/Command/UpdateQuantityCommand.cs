@@ -32,7 +32,7 @@ internal class UpdateQuantityCommand : NonTerminatingCommand, IParameterisedComm
 
     }
 
-    internal override bool InternalCommand()
+    protected override bool InternalCommand()
     {
         return _context.UpdateQuantity(InventoryName!, Quantity);
     }

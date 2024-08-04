@@ -10,7 +10,7 @@ internal class QuitCommand : InventoryCommand
 
     }
 
-    internal override bool InternalCommand()
+    protected override bool InternalCommand()
     {
         Interface.WriteMessage("Thank you for using FlixOne Inventory Management System.");
         return true;

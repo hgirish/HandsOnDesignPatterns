@@ -8,7 +8,7 @@ internal class UnknownCommand : NonTerminatingCommand
     {
     }
 
-    internal override bool InternalCommand()
+    protected override bool InternalCommand()
     {
         Interface.WriteWarning("Unable to determine the desired command.");
         return false;
