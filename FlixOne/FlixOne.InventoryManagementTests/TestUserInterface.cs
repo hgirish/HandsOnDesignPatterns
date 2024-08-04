@@ -1,4 +1,4 @@
-﻿using FlixOne.InventoryManagement;
+﻿using FlixOne.InventoryManagement.UserInterface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
