@@ -1,4 +1,5 @@
 ﻿using FlixOne.InventoryManagement.Command;
+using FlixOne.InventoryManagementTests.Helpers;
 
 namespace FlixOne.InventoryManagementTests;
 [TestClass]

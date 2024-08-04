@@ -1,13 +1,18 @@
-﻿using FlixOne.InventoryManagement.UserInterface;
+﻿using FlixOne.InventoryManagement.Repository;
+using FlixOne.InventoryManagement.UserInterface;
 
 namespace FlixOne.InventoryManagement.Command;
 
-public class AddInventoryCommand : InventoryCommand, IParameterisedCommand
+internal class AddInventoryCommand : NonTerminatingCommand, IParameterisedCommand
 {
-    public AddInventoryCommand(bool commandIsTerminating,
-        IUserInterface userInterface) :
-        base(commandIsTerminating, userInterface)
+    private readonly IInventoryContext _context;
+
+    public AddInventoryCommand(
+        IUserInterface userInterface,
+        IInventoryContext context) :
+        base( userInterface)
     {
+        _context = context;
     }
 
     public string? InventoryName { get; private set; }
@@ -24,6 +29,6 @@ public class AddInventoryCommand : InventoryCommand, IParameterisedCommand
 
     internal override bool InternalCommand()
     {
-        throw new NotImplementedException();
+        return _context.AddBook(InventoryName!);
     }
 }

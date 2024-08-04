@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FlixOne.InventoryManagementTests;
+namespace FlixOne.InventoryManagementTests.Helpers;
 
 internal class TestUserInterface : IUserInterface
 {
@@ -18,8 +18,8 @@ internal class TestUserInterface : IUserInterface
     private int _expectedWriteWarningRequestsIndex;
 
     public TestUserInterface(
-        List<Tuple<string, string>> expectedReadRequests, 
-        List<string> expectedWriteRequests, 
+        List<Tuple<string, string>> expectedReadRequests,
+        List<string> expectedWriteRequests,
         List<string> expectedWarningRequests)
     {
         _expectedReadRequests = expectedReadRequests;
