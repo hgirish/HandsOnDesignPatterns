@@ -2,33 +2,16 @@
 using System.Collections.Concurrent;
 
 namespace FlixOne.InventoryManagement.Repository;
-internal class InventoryContext : IInventoryContext
+public class InventoryContext : IInventoryContext
 {
     private readonly IDictionary<string, Book> _books;
     private static object _locker = new object();
-    protected InventoryContext()
+    public InventoryContext()
     {
         _books = new ConcurrentDictionary<string, Book>();
     }
     private static InventoryContext? _context;
-    public static InventoryContext Singleton
-    {
-        get
-        {
-            if (_context == null)
-            {
-                lock (_locker)
-                {
-                    if (_context == null)
-                    {
-                        _context = new InventoryContext();
-                    }
-                   
-                }
-            }
-            return _context;
-        }
-    }
+   
     public bool AddBook(string name)
     {
         _books.Add(name, new Book { Name = name });

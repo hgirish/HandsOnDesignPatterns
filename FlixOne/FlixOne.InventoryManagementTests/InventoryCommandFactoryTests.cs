@@ -1,4 +1,5 @@
 ﻿using FlixOne.InventoryManagement.Command;
+using FlixOne.InventoryManagement.Repository;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,10 @@ namespace FlixOne.InventoryManagementTests;
 public class InventoryCommandFactoryTests
 {
     private InventoryCommandFactory? Factory;
-
+    private IInventoryContext GetInventoryContext()
+    {
+        return new InventoryContext();
+    }
     [TestInitialize]
     public void Initialize()
     {
@@ -21,7 +25,7 @@ public class InventoryCommandFactoryTests
             new List<string>()
             );
 
-        Factory = new InventoryCommandFactory(expectedInterface );
+        Factory = new InventoryCommandFactory(expectedInterface, GetInventoryContext() );
     }
 
     [TestMethod]

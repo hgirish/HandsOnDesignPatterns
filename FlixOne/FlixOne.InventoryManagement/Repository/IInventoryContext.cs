@@ -2,7 +2,7 @@
 
 namespace FlixOne.InventoryManagement.Repository;
 
-internal interface IInventoryContext
+public interface IInventoryContext
 {
     Book[] GetBooks();
     bool AddBook(string name);
