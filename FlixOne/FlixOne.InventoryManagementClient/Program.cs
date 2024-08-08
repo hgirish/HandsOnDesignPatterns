@@ -21,7 +21,8 @@ static void ConfigureServices(IServiceCollection services)
 {
     services.AddTransient<IUserInterface, ConsoleUserInterface>();
     services.AddTransient<ICatalogService, CatalogService>();
-    services.AddTransient<IInventoryCommandFactory, InventoryCommandFactory>();
+    services.AddTransient<Func<string, InventoryCommand>>(InventoryCommand.GetInventoryCommand);
+
 
     var context = new InventoryContext();
     services.AddSingleton<IInventoryReadContext, IInventoryReadContext>(p => context);
