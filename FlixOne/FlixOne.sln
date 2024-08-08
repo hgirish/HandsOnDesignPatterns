@@ -3,19 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlixOne.InventoryManagement", "FlixOne.InventoryManagement\FlixOne.InventoryManagement.csproj", "{FCBBCDA3-B9BE-4660-AADB-70CD74766E89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlixOne.InventoryManagement", "FlixOne.InventoryManagement\FlixOne.InventoryManagement.csproj", "{FCBBCDA3-B9BE-4660-AADB-70CD74766E89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlixOne.InventoryManagementClient", "FlixOne.InventoryManagementClient\FlixOne.InventoryManagementClient.csproj", "{089B1EBB-61B4-4875-AD8C-BC9490850A12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlixOne.InventoryManagementClient", "FlixOne.InventoryManagementClient\FlixOne.InventoryManagementClient.csproj", "{089B1EBB-61B4-4875-AD8C-BC9490850A12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlixOne.InventoryManagementTests", "FlixOne.InventoryManagementTests\FlixOne.InventoryManagementTests.csproj", "{D2645DE2-A67A-4BA1-8D87-C297D2BC740C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlixOne.InventoryManagementTests", "FlixOne.InventoryManagementTests\FlixOne.InventoryManagementTests.csproj", "{D2645DE2-A67A-4BA1-8D87-C297D2BC740C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlixOne.Web", "FlixOne.Web\FlixOne.Web.csproj", "{DC6BC088-CCC9-48FC-8F0B-9E8CE9A252D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FCBBCDA3-B9BE-4660-AADB-70CD74766E89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +29,12 @@ Global
 		{D2645DE2-A67A-4BA1-8D87-C297D2BC740C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2645DE2-A67A-4BA1-8D87-C297D2BC740C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2645DE2-A67A-4BA1-8D87-C297D2BC740C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC6BC088-CCC9-48FC-8F0B-9E8CE9A252D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC6BC088-CCC9-48FC-8F0B-9E8CE9A252D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC6BC088-CCC9-48FC-8F0B-9E8CE9A252D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC6BC088-CCC9-48FC-8F0B-9E8CE9A252D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
