@@ -14,4 +14,5 @@ public interface IInventoryRepository
     bool AddCategory(Category category);
     bool UpdateCategory(Category category);
     bool RemoveCategory(Category category);
+    //IEnumerable<ProductViewModel> GetProductList();
 }

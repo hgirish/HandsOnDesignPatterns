@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlixOne.InventoryManagement
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlixOne.Web", "FlixOne.Web\FlixOne.Web.csproj", "{DC6BC088-CCC9-48FC-8F0B-9E8CE9A252D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlixOne.ProductTests", "FlixOne.ProductTests\FlixOne.ProductTests.csproj", "{3FA8A085-0395-4E75-8EA8-27D864B9A06E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,8 +35,15 @@ Global
 		{DC6BC088-CCC9-48FC-8F0B-9E8CE9A252D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC6BC088-CCC9-48FC-8F0B-9E8CE9A252D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC6BC088-CCC9-48FC-8F0B-9E8CE9A252D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FA8A085-0395-4E75-8EA8-27D864B9A06E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FA8A085-0395-4E75-8EA8-27D864B9A06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FA8A085-0395-4E75-8EA8-27D864B9A06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FA8A085-0395-4E75-8EA8-27D864B9A06E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {668C89C4-9297-4651-8347-EC9C857F2DEC}
 	EndGlobalSection
 EndGlobal
