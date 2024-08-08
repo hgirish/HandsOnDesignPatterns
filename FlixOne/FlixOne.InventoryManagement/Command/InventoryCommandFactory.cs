@@ -12,6 +12,7 @@ public class InventoryCommandFactory : IInventoryCommandFactory
     {
         _userInterface = userInterface;
         _context = context;
+        
     }
     public InventoryCommand GetCommand(string input)
     {

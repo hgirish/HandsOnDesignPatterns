@@ -5,10 +5,10 @@ namespace FlixOne.InventoryManagement.Command;
 
 internal class GetInventoryCommand: NonTerminatingCommand
 {
-    private readonly IInventoryContext _context;
+    private readonly IInventoryReadContext _context;
 
     internal GetInventoryCommand(IUserInterface userInterface,
-        IInventoryContext context) : base(userInterface)
+        IInventoryReadContext context) : base(userInterface)
     {
         _context = context;
     }

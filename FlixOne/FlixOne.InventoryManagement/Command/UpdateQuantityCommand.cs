@@ -5,10 +5,10 @@ namespace FlixOne.InventoryManagement.Command;
 
 internal class UpdateQuantityCommand : NonTerminatingCommand, IParameterisedCommand
 {
-    private readonly IInventoryContext _context;
+    private readonly IInventoryWriteContext _context;
 
     internal UpdateQuantityCommand(IUserInterface userInterface,
-        IInventoryContext context) : base(userInterface)
+        IInventoryWriteContext context) : base(userInterface)
     {
         _context = context;
     }

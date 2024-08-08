@@ -3,8 +3,7 @@
 namespace FlixOne.InventoryManagement.Repository;
 
 public interface IInventoryContext
+    : IInventoryReadContext, IInventoryWriteContext
 {
-    Book[] GetBooks();
-    bool AddBook(string name);
-    bool UpdateQuantity(string name, int quantity);
+   
 }
